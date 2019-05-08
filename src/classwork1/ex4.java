@@ -27,7 +27,7 @@ public class ex4 {
             System.out.println("No Triangle");
 
     }
-    public static int swap(int x,int y){
+    static int swap(int x,int y){
         return x;
     }
 }
