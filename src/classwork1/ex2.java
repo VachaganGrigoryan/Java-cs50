@@ -3,7 +3,7 @@ package classwork1;
 public class ex2 {
     public static void main(String[] args) {
 
-        int n = 10;
+        int n = 20;
         int n2 = n/2;
 
         for (int i = 0; i < n2; i++){
