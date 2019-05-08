@@ -11,8 +11,6 @@ public class ex4 {
         int b = myObject.nextInt();
         int c = myObject.nextInt();
 
-        b = swap(a,a=b);
-
         if(a>b && a>c)
             c = swap(a,a=c);
         else if (b>c)
