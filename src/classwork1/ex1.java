@@ -10,14 +10,11 @@ public class ex1 {
         int i = 0;
 
         while (sum > 0){
-            int item = (int)(sum/coin[i]);
-            if(item > 0)
+            int item = sum/coin[i];
+            if(item > 0) {
                 System.out.println(item + " * " + coin[i]);
-            else {
-                i++;
-                continue;
+                sum = sum - item * coin[i];
             }
-            sum = sum - item * coin[i];
             i++;
         }
 
