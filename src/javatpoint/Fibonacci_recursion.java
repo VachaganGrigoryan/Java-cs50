@@ -10,9 +10,7 @@ public class Fibonacci_recursion {
         System.out.println(fibRecursion(n));
     }
 
-
     static int fibRecursion(int N){
         return  (N < 2 ? N : fibRecursion(N-1) + fibRecursion(N-2));
-
     }
 }
