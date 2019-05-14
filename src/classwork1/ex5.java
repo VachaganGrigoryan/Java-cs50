@@ -1,28 +1,23 @@
 package classwork1;
 
+import java.util.Scanner;
+
 public class ex5 {
     public static void main(String[] args){
-//      long card = 4033190012565448L;
-//      long card = 4355053922842671L;
-//      long card = 4033190001693268L;
-        long card = 4355053922883303L;
+        Scanner myObj = new Scanner(System.in);
+        long card = myObj.nextLong();
         int sum = 0;
-        int i = 1;
+        boolean isTwo = false;
 
         while (card>0){
             int num = (int)(card%10);
-            if (i%2 == 0){
+            if (isTwo)
                 num*=2;
-                if (num>9) {
-                    sum += num % 10;
-                    num /= 10;
-                }
-            }
-            i++;
-            sum += num;
+            isTwo = !isTwo;
+
+            sum += num/10 + num % 10;
             card /= 10;
         }
         System.out.println("Your Card " + (sum%10==0 ? "Vallid" : "Invallid") + ", \\ Sum Card Number = " + sum);
-
     }
 }
