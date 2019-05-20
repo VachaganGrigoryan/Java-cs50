@@ -7,21 +7,25 @@ public class ex2 {
         Scanner myint = new Scanner(System.in);
         Scanner mychar = new Scanner(System.in);
 
-        int key = myint.nextInt();
+        int key = myint.nextInt()%26;
         char[] word = mychar.nextLine().toCharArray();
         String newword = "";
-        key = key%26;
 
-        for (char i:word) {
-            char c = (char)(i + key);
-            if(c > 'Z'  && i >= 'A' && i <= 'Z'){
-                c = (char)(c - 'Z' + 'A' - 1);
-            }else if (c > 'z'){
-                c = (char)(c - 'z' + 'a' - 1);
+        for (char letter:word) {
+            if (letter >= 'A' && letter <= 'Z') {
+                letter = (char) (letter + key);
+                if (letter > 'Z') {
+                    letter = (char) (letter - 26);
+                }
+            }else if(letter >= 'a' && letter <= 'z'){
+                letter = (char) (letter + key);
+                if (letter > 'z') {
+                    letter = (char) (letter - 26);
+                }
             }
-            newword += c;
+            newword += letter;
         }
-
+        
         System.out.println(newword);
     }
 }
