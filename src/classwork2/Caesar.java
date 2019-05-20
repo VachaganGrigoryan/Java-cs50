@@ -2,7 +2,7 @@ package classwork2;
 
 import java.util.Scanner;
 
-public class ex2 {
+public class Caesar {
     public static void main(String[] args){
         Scanner myint = new Scanner(System.in);
         Scanner mychar = new Scanner(System.in);

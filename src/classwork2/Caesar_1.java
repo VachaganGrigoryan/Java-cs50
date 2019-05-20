@@ -2,7 +2,7 @@ package classwork2;
 
 import java.util.Scanner;
 
-public class ex2_1 {
+public class Caesar_1 {
         public static void main(String[] args){
             Scanner myObj = new Scanner(System.in);
 
